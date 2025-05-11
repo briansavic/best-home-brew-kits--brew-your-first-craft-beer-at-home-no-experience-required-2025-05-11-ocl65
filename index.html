@@ -172,6 +172,27 @@
         </div>
     </section>
 
+    <div class="calculator">
+    <h2><center>Home Brewing Calculator</center></h2>
+    <label for="batchSize">Batch Size (liters):</label>
+    <input type="number" id="batchSize" placeholder="Enter batch size in liters">
+
+    <label for="maltExtract">Malt Extract (kg per liter):</label>
+    <input type="number" id="maltExtract" placeholder="Enter malt extract per liter">
+
+    <label for="hops">Hops (grams per liter):</label>
+    <input type="number" id="hops" placeholder="Enter hops per liter">
+
+    <button onclick="calculateIngredients()">Calculate Ingredients</button>
+    <button id="resetButton" onclick="resetCalculator()">Reset</button>
+
+    <div id="result"></div>
+</div>
+
+<section id="faqs">
+    <h2>FAQs</h2>
+    <p>...</p>
+</section>
 
     <!-- FAQ Section -->
 <section id="faq" class="py-24 bg-gray-50">
