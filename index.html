@@ -67,6 +67,7 @@
                     </div>
                     <h3 class="text-xl font-bold mb-4">Full Temperature Control</h3>
                     <p class="text-gray-600">Precise temperature management for perfect fermentation every time.</p>
+                    
   <!-- Features Section -->
 <section id="features" class="py-24 bg-gray-50">
     <div class="container mx-auto px-4">
@@ -200,6 +201,128 @@
             <a href="https://kegland.com.au" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">Get Your Kit Now</a>
         </div>
     </section>
+
+    <!-- FAQ Section -->
+<section id="faq" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+            <!-- Question 1 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>What is included in the home brew kit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">The home brew kit includes all the necessary equipment and ingredients to brew your first craft beer, including a fermenter, sanitizer, malt extract, hops, and yeast.</p>
+                </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>Do I need any prior experience to use this kit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">No, our home brew kits are designed for beginners. You’ll receive detailed step-by-step instructions to guide you through the entire brewing process.</p>
+                </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>How long does it take to brew beer using this kit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">The brewing process takes about 2-3 hours, and the beer will need to ferment for 1-2 weeks, depending on the recipe.</p>
+                </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>What types of beer can I brew with this kit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">You can brew a variety of beers, including ales, stouts, lagers, and IPAs. The specific type depends on the recipe kit you choose.</p>
+                </div>
+            </div>
+            <!-- Question 5 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>Can I reuse the equipment in the kit?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">Yes, the equipment is reusable. You can purchase additional ingredient kits to brew more batches of beer.</p>
+                </div>
+            </div>
+            <!-- Question 6 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>Is the kit suitable for gift-giving?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">Absolutely! Our home brew kits make a perfect gift for beer enthusiasts and hobbyists.</p>
+                </div>
+            </div>
+            <!-- Question 7 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>Do you offer customer support if I have questions?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">Yes, we offer customer support via email and phone to assist you with any questions or issues you may encounter during the brewing process.</p>
+                </div>
+            </div>
+            <!-- Question 8 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>Are the ingredients fresh?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">Yes, we ensure that all ingredients are fresh and of the highest quality to deliver the best brewing experience.</p>
+                </div>
+            </div>
+            <!-- Question 9 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>Can I customize the recipes?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">Yes, once you’re comfortable with the brewing process, you can experiment with different ingredients to create your own custom recipes.</p>
+                </div>
+            </div>
+            <!-- Question 10 -->
+            <div class="border-b">
+                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
+                    <span>Is this kit environmentally friendly?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="hidden">
+                    <p class="text-gray-600 pb-4">We strive to minimize waste by using reusable equipment and recyclable packaging. Brewing your own beer also reduces the carbon footprint associated with commercial beer production and transportation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Simple toggle script for dropdown questions
+    document.querySelectorAll('#faq button').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            content.classList.toggle('hidden');
+            const icon = button.querySelector('i');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        });
+    });
+</script>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
