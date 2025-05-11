@@ -173,22 +173,89 @@
     </section>
     
 
+  <section id="brewing-calculator">
     <div class="calculator">
-    <h2><center>Home Brewing Calculator</center></h2>
-    <label for="batchSize">Batch Size (liters):</label>
-    <input type="number" id="batchSize" placeholder="Enter batch size in liters">
+        <h2><center>Home Brewing Calculator</center></h2>
+        <label for="batchSize">Batch Size (liters):</label>
+        <input type="number" id="batchSize" placeholder="Enter batch size in liters">
 
-    <label for="maltExtract">Malt Extract (kg per liter):</label>
-    <input type="number" id="maltExtract" placeholder="Enter malt extract per liter">
+        <label for="maltExtract">Malt Extract (kg per liter):</label>
+        <input type="number" id="maltExtract" placeholder="Enter malt extract per liter">
 
-    <label for="hops">Hops (grams per liter):</label>
-    <input type="number" id="hops" placeholder="Enter hops per liter">
+        <label for="hops">Hops (grams per liter):</label>
+        <input type="number" id="hops" placeholder="Enter hops per liter">
 
-    <button onclick="calculateIngredients()">Calculate Ingredients</button>
-    <button id="resetButton" onclick="resetCalculator()">Reset</button>
+        <button onclick="calculateIngredients()">Calculate Ingredients</button>
+        <button id="resetButton" onclick="resetCalculator()">Reset</button>
 
-    <div id="result"></div>
-</div>
+        <div id="result"></div>
+    </div>
+
+    <style>
+        #brewing-calculator {
+            margin-top: 40px;
+        }
+        .calculator {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .calculator input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        .calculator button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .calculator button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #resetButton {
+            margin-top: 10px; /* Add margin to the top of the reset button */
+        }
+    </style>
+
+    <script>
+        function calculateIngredients() {
+            var batchSize = parseFloat(document.getElementById('batchSize').value);
+            var maltExtract = parseFloat(document.getElementById('maltExtract').value);
+            var hops = parseFloat(document.getElementById('hops').value);
+
+            if (isNaN(batchSize) || isNaN(maltExtract) || isNaN(hops)) {
+                alert("Please enter valid numbers");
+                return;
+            }
+
+            var totalMaltExtract = batchSize * maltExtract;
+            var totalHops = batchSize * hops;
+
+            document.getElementById('result').innerHTML =
+                "Total Malt Extract: " + totalMaltExtract.toFixed(2) + " kg<br>" +
+                "Total Hops: " + totalHops.toFixed(2) + " grams";
+        }
+
+        function resetCalculator() {
+            document.getElementById('batchSize').value = '';
+            document.getElementById('maltExtract').value = '';
+            document.getElementById('hops').value = '';
+            document.getElementById('result').innerHTML = '';
+        }
+    </script>
+</section>
     
 
 <section id="faqs">
