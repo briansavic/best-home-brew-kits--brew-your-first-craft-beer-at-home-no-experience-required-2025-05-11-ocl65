@@ -195,30 +195,23 @@
 </section>
 
     <!-- FAQ Section -->
-<section id="faq" class="py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <!-- Question 1 -->
-            <div class="border-b">
-                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
-                    <span>What is included in the home brew kit?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="hidden">
-                    <p class="text-gray-600 pb-4">The home brew kit includes all the necessary equipment and ingredients to brew your first craft beer, including a fermenter, sanitizer, malt extract, hops, and yeast.</p>
-                </div>
-            </div>
-            <!-- Question 2 -->
-            <div class="border-b">
-                <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
-                    <span>Do I need any prior experience to use this kit?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="hidden">
-                    <p class="text-gray-600 pb-4">No, our home brew kits are designed for beginners. You’ll receive detailed step-by-step instructions to guide you through the entire brewing process.</p>
-                </div>
-            </div>
+<script>
+   <script>
+    // Toggle script to show/hide FAQ answers
+    document.querySelectorAll('#faq button').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling; // Grab the answer div
+            const icon = button.querySelector('i'); // Grab the chevron icon
+
+            // Toggle visibility
+            content.classList.toggle('hidden');
+            
+            // Toggle icon direction
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        });
+    });
+</script>
             <!-- Question 3 -->
             <div class="border-b">
                 <button class="w-full text-left text-lg font-semibold py-4 flex justify-between items-center">
